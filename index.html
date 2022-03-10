@@ -13,6 +13,9 @@
 
 </head>
 <body>
+    <section id="overlay"></section>
+
+
     <!-- nav bar left -->
     <div class="navbar_left">
         <div class="somename">
@@ -22,7 +25,20 @@
             <i class="fa-solid fa-bars"></i>
         </div>
     </div>
-    <div class="bodymain">
+
+    
+    <div class="mainnavbar">
+        <ul class="navbar__links">
+            <li class="navbar__link">SOME NAME</li>
+            <li class="navbar__link"><a href="#">CLOSE</a></li>
+            <li class="navbar__link"><a href="#portfolio">PORTFOLIO</a></li>
+            <li class="navbar__link"><a href="#about">ABOUT ME</a></li>
+            <li class="navbar__link"><a href="#contact">CONTACT</a></li>  
+        </ul>
+    </div>
+
+
+    <div class="bodymain" id="portfolio">
         <div class="imgheader">
             <img src="./image/img1.jpg" alt="">
             <img src="./image/img2.jpg" alt="">
@@ -46,7 +62,7 @@
             </div>
         </div>
 
-        <div class="about">
+        <div class="about" id="about"> 
             <div class="infor">
                 <h2>About Me</h2>
                 <img src="./image/about.jpg" alt="">
@@ -131,7 +147,7 @@
 
         </div>
 
-        <div class="contact">
+        <div class="contact" id="contact">
 
             <h2>Contact Me</h2>
             <p>Do you want me to photograph you? Fill out the form and fill me in with the details :) I love meeting new people!</p>
