@@ -6,8 +6,8 @@ const closeBtn = document.querySelectorAll(".navbar__link");
 const overlay = document.querySelector("#overlay");
 
 const overlayimg = document.querySelector(".overlayimg");
-const imgs = document.querySelectorAll(".imgheader img");
-const imgBlock = document.querySelector(".imgBlock");
+const images = document.querySelectorAll(".imgheader img");
+// const imgBlock = document.querySelector(".imgBlock");
 console.log(overlayimg);
 menuButton.addEventListener("click", () => {
     menu.classList.toggle("navbar__open");
@@ -38,5 +38,26 @@ overlay.addEventListener("click", () =>{
 //     })
 // })
 
+{/*  */}
 
+images.forEach(item => item.addEventListener("click",handleZoomImage));
+function handleZoomImage(event){
+    console.log(event.target);
+    const image= event.target.getAttribute("src");
+    const template =`<div class="lightbox">
+    <div class="lightbox-content">
+        <img src="${image}" alt="" class="lightbox-image">
+    </div>
+    </div>`;
+    document.body.insertAdjacentHTML("beforeend", template);
+
+    document.body.addEventListener("click", function(e){
+        if(e.target.matches(".lightbox")){
+            // remove lightbox out of dom
+
+            e.target.parentNode.removeChild(e.target);
+
+        }
+    })
+}
 

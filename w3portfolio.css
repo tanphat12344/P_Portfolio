@@ -336,7 +336,7 @@ body{
     padding-right: 8px;
 }
 
-.overlayimg {
+/* .overlayimg {
     background-color: rgba(0, 0, 0, 0.4);
     right:0;
     left:0;
@@ -344,19 +344,40 @@ body{
     bottom:0;
     display:none;
     position:fixed;
-    /* z-index: 9; */
+    z-index: 9;
 }
 
 .imgBlock {
     width:800px;
     height:600px;
     display:none;
-    /* z-index: 19; */
-    
-    
+    z-index: 19;
 
+} */
+
+.lightbox{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 99;
+    background-color:rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.lightbox-content{
+    max-width: 1000px;
+    margin: 0 auto;
+} 
+.lightbox-content img{
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
 
 @media(min-width:600px) and (max-width:1000px){
 .imgheader{
